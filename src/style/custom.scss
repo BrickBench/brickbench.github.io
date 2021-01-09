@@ -1,0 +1,31 @@
+@import './colors';
+@import "bootstrap/scss/bootstrap";
+
+$theme-colors: (
+    "primary": $light-green,
+    "secondary": $dark-green,
+    "bottom": $dark-grey,
+    "middle": $med-grey,
+    "top": $light-grey
+);
+
+$body-bg: $dark-grey;
+$body-color: white;
+
+.btn {
+  margin: 0.5 * $spacer;
+}
+
+.list-group-item {
+  background-color: inherit !important;
+  color: inherit !important;
+}
+
+*.active {
+  color: white !important;
+  background-color: $light-green !important;
+  border-color: $light-green !important;
+}
+
+
+@import "bootstrap/scss/bootstrap";
