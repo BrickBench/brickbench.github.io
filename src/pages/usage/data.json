@@ -1,0 +1,92 @@
+{
+  "faq": [
+    {
+      "q" : "When is editing coming?",
+      "a" : "Editing is going to be a goal for the future, but we are focusing on improving accuracy first before doing editing."
+    },
+    {
+      "q" : "Mac Version?",
+      "a" : "Not yet."
+    },
+    {
+      "q" : "How can I contribute?",
+      "a" : "We're currently considering options for how to do source contributions, we'll keep this page updated as it goes. If you have any open source tools you would like to get added to this, feel free to contact us!"
+    },
+    {
+      "q" : "I want to request a feature or report a bug. How can I do so?",
+      "a" : "If you have a Github account, you can go to the Issues page above and make an issue with the tag Enhancement, and we'll check it out."
+    },
+    {
+      "q" : "I have another question or comment.",
+      "a" : "You can use the new Discussions feature in Github above to ask anything to the community!"
+    }
+  ],
+  "fileTypes" : [
+    {
+      "type" : ".gsc",
+      "desc" : "(Game Scene) This file contains the map scene. This includes all rendering related objects, splines, culling portals, and others."
+    },
+    {
+      "type" : ".ter",
+      "desc" : "(Terrain) This file contains all collision related objects. This includes terrain groups, infinite walls, and terrain platforms."
+    },
+    {
+      "type" : ".giz",
+      "desc" : "(Gizmo) This file contains all gizmos for the map. Gizmos include most interactable objects, but do not include their graphical elements (the actual panel for GizPanel, textures for GizPickup, etc), as those are either in THINGS.GSC or in the map GSC file."
+    },
+    {
+      "type" : ".ai2",
+      "desc" : "(AI) This file contains data relating to AI characters, known in the engine as creatures. This includes their spawn locations, locators for use in script files, and the AI pathfinding mesh."
+    },
+    {
+      "type" : ".txt",
+      "desc" : "This file contains various miscellaneous pieces of information about the map. It contains various values to pre-make storage for game objects, sets up cameras and doors, and creastes various objects that rely on data from multiple files."
+    }
+  ],
+  "objectTypes" : [
+    {
+      "type" : "Static Render Mesh",
+      "desc" : "is used to identify parts of the viewable scene that cannot change."
+    },
+    {
+      "type" : "Special Objects",
+      "desc" : "are rendered objects that can be moved. These are often used as a base to attach other objects to (eg. A PushBlock might attach itself to a special object to keep track of the block's position)"
+    },
+    {
+      "type" : "Splines",
+      "desc" : "are a list of points in space, often representing a line, used for a variety of tasks. Some examples are for camera paths, vehicle paths in levels like Podrace, and to define areas for doors."
+    },
+    {
+      "type" : "Terrain Group / Terrain Platform",
+      "desc" : "refers to the mesh used for 3D collision. Each section is known as a terrain group. Each triangle in the terrain group can have special properties attached like slipperiness, killplanes, etc. A collision mesh that moves is attached to a special object, and is known as a terrain platform."
+    },
+    {
+      "type" : "Collision Walls",
+      "desc" : "are areas that represent an infinite vertical wall used for collision. These are always static."
+    },
+    {
+      "type" : "Gizmos",
+      "desc" : "are a broad category of objects that have some interactive behavior. Some examples are pickup coins, panels, and pushable blocks"
+    },
+    {
+      "type" : "Triggers",
+      "desc" : "are boxes in space that can be used by scripts to define custom behavior, such as spawning enemies when the player enters an area."
+    },
+    {
+      "type" : "Doors",
+      "desc" : "represent transitions between and within levels. Each door has a door area that defines where the entry is, and a spline coming out that defines where the players are dropped off. In most cases in TCS, if a door has a different map as its target, an identically named door should exist in the other map, and the spline leading from that identical door in the other level (the door is usually located out of the boundaries of the map), will lead to where you end up after transitioning."
+    },
+    {
+      "type" : "AI Locators",
+      "desc" : "are points in space that the AI can use in scripts as targets."
+    },
+    {
+      "type" : "Creature Spawns",
+      "desc" : "are locations where creatures (enemies, friends, vehicles, etc) spawn when the level loads."
+    },
+    {
+      "type" : "Portals",
+      "desc" : "are used to define zones for rendering culling."
+    }
+  ]
+}

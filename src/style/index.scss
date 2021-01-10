@@ -48,8 +48,18 @@ p, li {
   border-bottom: 2px solid $dark-green !important;
 }
 
-.external {
+.link {
   font-style: italic !important;
   text-decoration: underline !important;
   color: $gold !important;
+}
+
+.screenshot {
+  transform: scale(1);
+  transition: 0.5s;
+  &:hover {
+    transform: scale(1.25);
+    z-index: 1;
+    cursor: pointer;
+  }
 }

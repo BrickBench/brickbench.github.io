@@ -1,6 +1,6 @@
 import Navbar from './components/navbar';
 import Footer from './components/footer';
-import { Installation, ChangeLog, Home, Releases } from './pages';
+import { Get, Home, Usage, Faq, Screenshots } from './pages';
 import {
   BrowserRouter as Router,
   Switch,
@@ -14,11 +14,17 @@ function App() {
           <Navbar />
           <div style={{flex: '2'}}>
             <Switch>
-              <Route path="/installation">
-                <Installation />
+              <Route path="/get">
+                <Get />
               </Route>
-              <Route path="/releases">
-                <Releases />
+              <Route path="/usage">
+                <Usage />
+              </Route>
+              <Route path="/faq">
+                <Faq />
+              </Route>
+              <Route path="/screenshots">
+                <Screenshots />
               </Route>
               <Route path="*">
                 <Home />
