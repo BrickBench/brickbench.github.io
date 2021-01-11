@@ -3,7 +3,7 @@ import data from './data.json';
 
 export default function Faq() {
   return (
-    <div className="container-lg p-5">
+    <div className="container-lg p-3">
         <h1>Frequently Asked Questions</h1>
         {data.faq.map(({q, a}, i) => {
           return (

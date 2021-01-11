@@ -1,26 +1,4 @@
 {
-  "faq": [
-    {
-      "q" : "When is editing coming?",
-      "a" : "Editing is going to be a goal for the future, but we are focusing on improving accuracy first before doing editing."
-    },
-    {
-      "q" : "Mac Version?",
-      "a" : "Not yet."
-    },
-    {
-      "q" : "How can I contribute?",
-      "a" : "We're currently considering options for how to do source contributions, we'll keep this page updated as it goes. If you have any open source tools you would like to get added to this, feel free to contact us!"
-    },
-    {
-      "q" : "I want to request a feature or report a bug. How can I do so?",
-      "a" : "If you have a Github account, you can go to the Issues page above and make an issue with the tag Enhancement, and we'll check it out."
-    },
-    {
-      "q" : "I have another question or comment.",
-      "a" : "You can use the new Discussions feature in Github above to ask anything to the community!"
-    }
-  ],
   "fileTypes" : [
     {
       "type" : ".gsc",

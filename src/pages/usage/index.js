@@ -16,7 +16,7 @@ export default function Usage() {
   return (
     <div className="container-fluid">
       <div className="row">
-        <div className="col-3">
+        <div className="col-sm-3">
           <div id="spy-target" className="p-2 list-group list-group-flush w-100 sidebar dark-bottom rounded">
             <a className="list-group-item list-group-item-action" href="#overview">Overview</a>
             <a className="list-group-item list-group-item-action" href="#controls">Controls</a>
@@ -24,7 +24,7 @@ export default function Usage() {
             <a className="list-group-item list-group-item-action" href="#object-types">Object Types</a>
           </div>
         </div>
-        <div className="col-6 p-2">
+        <div className="col-sm-6 p-2">
           <div className="px-4 m-2 dark-bottom">
             <div id="overview">
               <h1>Overview</h1>
@@ -176,7 +176,7 @@ export default function Usage() {
             </div>
           </div>
         </div>
-        <div className="col-3">
+        <div className="col-sm-3">
           <div className="dark-bottom sidebar p-2">
             <h5>Related Content</h5>
             <a className="link" href="#">Where can I download these games?</a>

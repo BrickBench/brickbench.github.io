@@ -11,7 +11,6 @@
       <li>App.js</li>
     </ul>
   </li>
-  <li>package.json</li>
 </ul>
 
 ## bin
