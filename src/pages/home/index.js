@@ -1,6 +1,5 @@
 import React from 'react';
-import { CodeSegment } from '../../components/code';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import $ from 'jquery';
 
 
@@ -35,18 +34,18 @@ export default class Home extends React.Component {
         <div className="bg-bottom d-flex justify-content-center align-items-center" style={{height: '50vh'}}>
           <div className="w-25 mr-5">
             <h1>Brick Bench</h1>
-            <h3>The <strong className="text-primary">premier</strong> map rendering tool for early TT games.</h3>
+            <h3>A map loading tool for early TT games.</h3>
           </div>
-          <img className="img-fluid" id="logo" src="./images/brick-bench.png" />
+          <img className="img-fluid" id="logo" alt="..." src="./images/brick-bench.png" />
         </div>
         <div className="d-flex justify-content-center align-items-center bg-primary text-secondary" style={{height: '50vh'}}>
           <Preview childNum={this.state.preview}>
-              <img className="preview img-fluid rounded" src="./images/screenshots/theed2.png"/>
-              <img className="preview img-fluid rounded" src="./images/screenshots/theed3.png"/>
-              <img className="preview img-fluid rounded" src="./images/screenshots/dagobah3.png"/>
-              <img className="preview img-fluid rounded" src="./images/screenshots/dagobah4.png"/>
-              <img className="preview img-fluid rounded" src="./images/screenshots/kamino2.png"/>
-              <img className="preview img-fluid rounded" src="./images/screenshots/kamino3.png"/>
+              <img className="preview img-fluid rounded" alt="..." src="./images/screenshots/theed2.png"/>
+              <img className="preview img-fluid rounded" alt="..." src="./images/screenshots/theed3.png"/>
+              <img className="preview img-fluid rounded" alt="..." src="./images/screenshots/dagobah3.png"/>
+              <img className="preview img-fluid rounded" alt="..." src="./images/screenshots/dagobah4.png"/>
+              <img className="preview img-fluid rounded" alt="..." src="./images/screenshots/kamino2.png"/>
+              <img className="preview img-fluid rounded" alt="..." src="./images/screenshots/kamino3.png"/>
           </Preview>
           <div className="w-25">
             <h2>Explore Maps in Detail</h2>
@@ -63,7 +62,7 @@ export default class Home extends React.Component {
             </p>
             <div>
               <NavLink className="btn btn-primary" to="/get">Get Started</NavLink>
-              <NavLink className="btn btn-secondary" to="/usage">Learn More</NavLink>
+              <NavLink className="btn btn-primary" to="/usage">Learn More</NavLink>
             </div>
         </div>
       </div>

@@ -15,7 +15,7 @@ export default function Navbar() {
           <NavLink activeClassName="text-primary" className="nav-item"
             to="/usage">Usage</NavLink>
           <NavLink activeClassName="text-primary" className="nav-item" to="/">
-            <img src="./images/brick-bench.png" style={{height: '3.8em'}} className="img-fluid" />
+            <img src="./images/brick-bench.png" style={{height: '2.8em'}} className="img-fluid hover-grow" />
           </NavLink>
           <NavLink activeClassName="text-primary" className="nav-item"
             to="/faq">FAQ</NavLink>

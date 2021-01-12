@@ -18,7 +18,7 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "predeploy": "npm run build",
+    "predeploy": "npm run build && cp public/404.html build/404.html && cp public/CNAME build/CNAME",
     "deploy": "gh-pages -d build",
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",

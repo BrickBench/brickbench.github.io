@@ -19,7 +19,7 @@ export default function Screenshots() {
               setSelected(filename);
             }}
             src={'./images/screenshots/'+filename} alt={''}
-              className="screenshot img-fluid m-4 rounded" style={{height: '10em'}}
+              className="hover-grow img-fluid m-4 rounded" style={{height: '10em'}}
           />
         )}
       </div>

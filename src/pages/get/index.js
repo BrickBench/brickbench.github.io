@@ -1,5 +1,6 @@
 import React from 'react';
 import { CodeSegment } from '../../components/code';
+import Releases from './releases';
 
 export default function Get() {
   const [os, setOs] = React.useState("windows");
@@ -21,7 +22,7 @@ export default function Get() {
         <div className="text-primary text-center">And you're good to go!</div>
       </div>
       <div className="rounded p-2 m-2 bg-middle dark-bottom">
-        <small>(CHANGE LOG HERE)</small>
+        <Releases />
       </div>
     </div>
   );
@@ -44,7 +45,6 @@ const WindowsInstallation = () => {
     </ol>
   );
 }
-
 const LinuxInstallation = () => {
   return (
     <ol>
