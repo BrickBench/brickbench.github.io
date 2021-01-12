@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import data from './data.json';
+import AwaitImage from '../../components/await-image';
 
 export default function Screenshots() {
   const [selected, setSelected] = useState('');
@@ -14,12 +15,12 @@ export default function Screenshots() {
       </div>
       <div className="d-flex flex-wrap">
         {data.screenshotFilenames.map(filename =>
-          <img key={filename} data-toggle="modal" data-target="#imageModal"
+          <AwaitImage key={filename} data-toggle="modal" data-target="#imageModal"
             onClick={() => {
               setSelected(filename);
             }}
-            src={'./images/screenshots/'+filename} alt={''}
-              className="hover-grow img-fluid m-4 rounded" style={{height: '10em'}}
+            src={'./images/screenshots/'+filename}
+            className="hover-grow img-fluid m-4 rounded" style={{height: '10em'}}
           />
         )}
       </div>

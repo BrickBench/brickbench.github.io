@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import $ from 'jquery';
+import AwaitImage from '../../components/await-image';
 
 
 export default class Home extends React.Component {
@@ -31,23 +32,23 @@ export default class Home extends React.Component {
   render() {
     return (
       <div className="container-fluid p-0">
-        <div className="bg-bottom d-flex justify-content-center align-items-center" style={{height: '50vh'}}>
-          <div className="w-25 mr-5">
+        <div className="bg-bottom d-flex flex-wrap justify-content-center align-items-center"
+          style={{minHeight: '50vh'}}>
+          <div className="mx-5">
             <h1>Brick Bench</h1>
             <h3>A map loading tool for early TT games.</h3>
           </div>
-          <img className="img-fluid" id="logo" alt="..." src="./images/brick-bench.png" />
+          <img className="img-fluid" alt="..." src="./images/brick-bench.png" />
         </div>
-        <div className="d-flex justify-content-center align-items-center bg-primary text-secondary" style={{height: '50vh'}}>
+        <div className="bg-primary d-flex flex-wrap justify-content-center align-items-center text-secondary"
+          style={{minHeight: '50vh'}}>
           <Preview childNum={this.state.preview}>
-              <img className="preview img-fluid rounded" alt="..." src="./images/screenshots/theed2.png"/>
-              <img className="preview img-fluid rounded" alt="..." src="./images/screenshots/theed3.png"/>
-              <img className="preview img-fluid rounded" alt="..." src="./images/screenshots/dagobah3.png"/>
-              <img className="preview img-fluid rounded" alt="..." src="./images/screenshots/dagobah4.png"/>
-              <img className="preview img-fluid rounded" alt="..." src="./images/screenshots/kamino2.png"/>
-              <img className="preview img-fluid rounded" alt="..." src="./images/screenshots/kamino3.png"/>
+              {['theed2', 'theed3', 'dagobah3', 'dagobah4', 'kamino2', 'kamino3']
+                .map(name => <AwaitImage key={name} className="preview img-fluid rounded"
+                  src={'./images/screenshots/'+name+'.png'}/>
+              )}
           </Preview>
-          <div className="w-25">
+          <div className="w-25 mx-5" style={{minWidth: '200px'}}>
             <h2>Explore Maps in Detail</h2>
             <p>Brick Bench offers an exhaustive set
             of features and options to simplify viewing game maps, allowing
@@ -55,9 +56,9 @@ export default class Home extends React.Component {
             </p>
           </div>
         </div>
-        <div className="d-flex flex-column justify-content-center align-items-center bg-bottom" style={{height: '50vh'}}>
+        <div className="d-flex flex-column justify-content-center align-items-center bg-bottom" style={{minHeight: '50vh'}}>
             <h2>Straightforward and Simple</h2>
-            <p className="w-25 text-center">Brick Bench is easy to set up and use. Get started in seconds
+            <p className="text-center mx-5">Brick Bench is easy to set up and use. Get started in seconds
             and learn more about the tool with well-managed documentation.
             </p>
             <div>
@@ -72,8 +73,7 @@ export default class Home extends React.Component {
 
 function Preview({children, childNum}) {
   return (
-    <div className="mr-5 d-flex justify-content-center align-items-center"
-      style={{height: '75%', width: '25%'}}>
+    <div className="w-25" style={{minWidth: '200px'}}>
       {children[childNum]}
     </div>
   );
