@@ -35,6 +35,8 @@ object-assign
  * Date: 2020-05-04T22:49Z
  */
 
+/*! showdown v 1.9.1 - 02-11-2019 */
+
 /** @license React v0.20.1
  * scheduler.production.min.js
  *
