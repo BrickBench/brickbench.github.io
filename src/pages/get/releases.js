@@ -1,5 +1,9 @@
 import React from 'react';
 import $ from 'jquery';
+import showdown from 'showdown';
+
+showdown.setOption('disableForced4SpacesIndentedSublists', true);
+const converter = new showdown.Converter();
 
 export default class Releases extends React.Component {
 
@@ -12,7 +16,7 @@ export default class Releases extends React.Component {
   }
 
   componentDidMount() {
-    $.get('https://api.github.com/repos/aydangoon/ghp-test/releases', (releases) => {
+    $.get('https://api.github.com/repos/BrickBench/BrickBench/releases', (releases) => {
       console.log(releases);
       this.setState({
         loading: false,
@@ -34,19 +38,25 @@ export default class Releases extends React.Component {
     return (
       <div>
         {this.state.releases.map(({name, body, tag_name, published_at, author}, i) => {
+          let [month, day, year] = (new Date(published_at)).toLocaleDateString("en-US").split("/");
+          year = year.substring(2);
+          let date = [month, day, year].join('/');
           return (
-            <div key={i}>
-              <div className="border-bottom d-flex justify-content-between">
+            <div key={i} className="bg-middle rounded my-2 p-2 dark-bottom">
+              <div className="d-flex justify-content-between border-bottom">
                 <div>
-                  <h1>{name}</h1>
-                  <h3 className="text-primary">v{tag_name}</h3>
+                  <h3>{name}</h3>
+                  <h5 className="text-primary">
+                    {tag_name}
+                    {i === 0 ? <span class="ml-2 badge badge-primary">New</span> : <React.Fragment />}
+                  </h5>
                 </div>
-                <div className="d-flex flex-column justify-content-center align-items-center">
+                <div className="d-flex flex-column justify-content-around align-items-center">
                   <img src={author.avatar_url} alt="..." style={{height: '3em'}} className="rounded-circle"/>
-                  <div>{(new Date(published_at)).toLocaleDateString()}</div>
+                  <div>{date}</div>
                 </div>
               </div>
-              <p>{body}</p>
+              <p dangerouslySetInnerHTML={{__html: converter.makeHtml(body)}}></p>
             </div>
           );
         })}

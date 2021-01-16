@@ -8,8 +8,9 @@ export default function Get() {
   // we want to do it this way instead of using a bool
   const windows = os === "windows";
   return (
-    <div className="container-lg">
-      <div className="rounded p-2 m-2 bg-middle dark-bottom">
+    <div className="container-md">
+      <h1 className="my-4">Installation</h1>
+      <div className="rounded p-2 my-2 bg-middle dark-bottom">
         <div className="d-flex">
           <button className={'btn flex-fill '+(windows ? 'active' : '')} onClick={() => setOs("windows")}>
             <img style={{height: '4em'}} src="./images/windows.png" className="img-fluid"/>
@@ -21,9 +22,8 @@ export default function Get() {
         {windows ? <WindowsInstallation /> : <LinuxInstallation />}
         <div className="text-primary text-center">And you're good to go!</div>
       </div>
-      <div className="rounded p-2 m-2 bg-middle dark-bottom">
-        <Releases />
-      </div>
+      <h1 className="my-4">Change Logs</h1>
+      <Releases />
     </div>
   );
 }
