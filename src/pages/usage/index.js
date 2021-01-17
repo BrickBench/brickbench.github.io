@@ -18,10 +18,10 @@ export default function Usage() {
       <div className="row">
         <div className="col-sm-3">
           <div id="spy-target" className="p-2 list-group list-group-flush w-100 sidebar dark-bottom rounded">
-            <a className="list-group-item list-group-item-action" href="#overview">Overview</a>
-            <a className="list-group-item list-group-item-action" href="#controls">Controls</a>
-            <a className="list-group-item list-group-item-action" href="#file-types">File Types</a>
-            <a className="list-group-item list-group-item-action" href="#object-types">Object Types</a>
+            <a className="list-group-item list-group-item-action" target="_blank" href="#overview">Overview</a>
+            <a className="list-group-item list-group-item-action" target="_blank" href="#controls">Controls</a>
+            <a className="list-group-item list-group-item-action" target="_blank" href="#file-types">File Types</a>
+            <a className="list-group-item list-group-item-action" target="_blank" href="#object-types">Object Types</a>
           </div>
         </div>
         <div className="col-sm-6 p-2">
@@ -31,9 +31,9 @@ export default function Usage() {
               <p>BrickBench is a tool for loading map files for the early TT Games
               games using the <CodeSegment inline><code className="reserved">{'.gsc'}</code></CodeSegment>
               file format (
-                <a className="link" href="#">Lego Star Wars: The Complete Saga</a>,&nbsp;
-                <a className="link" href="#">Lego Indiana Jones</a>,&nbsp;
-                and <a className="link" href="#">Lego Batman</a>).
+                <a className="link" target="_blank" href={data.links.tcs}>Lego Star Wars: The Complete Saga</a>,&nbsp;
+                <a className="link" target="_blank" href={data.links.lij}>Lego Indiana Jones</a>,&nbsp;
+                and <a className="link" target="_blank" href={data.links.lb}>Lego Batman</a>).
               </p>
               <p>The focus is on TCS, but LIJ
                 and Batman have increasing compatibility as well.
@@ -179,9 +179,9 @@ export default function Usage() {
         <div className="col-sm-3">
           <div className="dark-bottom sidebar p-2">
             <h5>Related Content</h5>
-            <a className="link" href="#">Where can I download these games?</a>
+            <a className="link" target="_blank" href={data.links.allGames}>Where can I download these games?</a>
             <br />
-            <a className="link" href="#">How do I access game data files?</a>
+            <a className="link" target="_blank" href={data.links.gameFiles}>How do I access game data files?</a>
           </div>
         </div>
       </div>

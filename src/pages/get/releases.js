@@ -37,24 +37,23 @@ export default class Releases extends React.Component {
     }
     return (
       <div>
-        {this.state.releases.map(({name, body, tag_name, published_at, author}, i) => {
-          let [month, day, year] = (new Date(published_at)).toLocaleDateString("en-US").split("/");
-          year = year.substring(2);
-          let date = [month, day, year].join('/');
+        {this.state.releases.map(({name, body, tag_name, assets}, i) => {
           return (
             <div key={i} className="bg-middle rounded my-2 p-2 dark-bottom">
-              <div className="d-flex justify-content-between border-bottom">
+              <div className="d-flex justify-content-between border-bottom align-items-center">
                 <div>
                   <h3>{name}</h3>
                   <h5 className="text-primary">
                     {tag_name}
-                    {i === 0 ? <span class="ml-2 badge badge-primary">New</span> : <React.Fragment />}
+                    {i === 0 ? <span className="ml-2 badge badge-primary">New</span> : <React.Fragment />}
                   </h5>
                 </div>
-                <div className="d-flex flex-column justify-content-around align-items-center">
-                  <img src={author.avatar_url} alt="..." style={{height: '3em'}} className="rounded-circle"/>
-                  <div>{date}</div>
-                </div>
+                <a className="btn btn-primary" href={assets[0].browser_download_url}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-download" viewBox="0 0 16 16">
+                  <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                  <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+                </svg>
+                </a>
               </div>
               <p dangerouslySetInnerHTML={{__html: converter.makeHtml(body)}}></p>
             </div>

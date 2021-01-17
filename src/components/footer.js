@@ -5,17 +5,20 @@ export default function Footer() {
       <div className="d-flex justify-content-around align-items-start mb-4">
         <div>
           <h5>Developer</h5>
-          <a className="link" href="#">Docs</a>
+          <a className="link" href="https://docs.google.com/document/d/1RXuAUQNmjFDr9oPZbHN-2UgKCik0rLudYj0bE-GejzM/edit?usp=sharing"
+            target="_blank">Docs</a>
         </div>
         <div>
           <h5>Community</h5>
-          <a className="link" href="#">Discord</a>
-          <br />
-          <a className="link" href="#">Twitter</a>
+          <a className="link" href="#" onClick={()=>{alert('BrickBench#1566');}}>Discord</a>
         </div>
         <div>
           <h5>Project</h5>
-          <a className="link" href="#">Github</a>
+          <a className="link" href="https://github.com/BrickBench/BrickBench"
+            target="_blank">Github</a>
+          <br />
+          <a className="link" href="https://github.com/BrickBench/BrickBench/projects/1"
+            target="_blank">Progress Tracker</a>
         </div>
       </div>
       <div className="d-flex flex-column align-items-center">

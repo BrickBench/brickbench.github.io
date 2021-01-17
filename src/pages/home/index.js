@@ -45,7 +45,7 @@ export default class Home extends React.Component {
           <Preview childNum={this.state.preview}>
               {['theed2', 'theed3', 'dagobah3', 'dagobah4', 'kamino2', 'kamino3']
                 .map(name => <AwaitImage key={name} className="preview img-fluid rounded"
-                  src={'./images/screenshots/'+name+'.png'}/>
+                  src={'./images/screenshots/'+name+'.jpg'}/>
               )}
           </Preview>
           <div className="w-25 mx-5" style={{minWidth: '200px'}}>

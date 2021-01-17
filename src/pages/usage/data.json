@@ -66,5 +66,12 @@
       "type" : "Portals",
       "desc" : "are used to define zones for rendering culling."
     }
-  ]
+  ],
+  "links": {
+    "tcs": "https://store.steampowered.com/app/32440/LEGO_Star_Wars__The_Complete_Saga/",
+    "lij": "https://store.steampowered.com/app/32330/LEGO_Indiana_Jones_The_Original_Adventures/",
+    "lb": "https://store.steampowered.com/app/21000/LEGO_Batman_The_Videogame/",
+    "allGames": "https://store.steampowered.com/search/?term=lego",
+    "gameFiles": "https://www.youtube.com/watch?v=tABoCw9FPwo"
+  }
 }

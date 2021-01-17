@@ -22,7 +22,7 @@ export default function Get() {
         {windows ? <WindowsInstallation /> : <LinuxInstallation />}
         <div className="text-primary text-center">And you're good to go!</div>
       </div>
-      <h1 className="my-4">Change Logs</h1>
+      <h1 className="my-4">Releases</h1>
       <Releases />
     </div>
   );
@@ -32,11 +32,11 @@ const WindowsInstallation = () => {
   return (
     <ol>
       <li>
-        Download the latest version of BrickBench: <a className="link" href="#">brickbench-windows.jar</a>
+        Download the latest version of BrickBench from releases below.
       </li>
       <li>
         Unzip the <CodeSegment inline><code className="reserved">.zip
-        </code></CodeSegment> archive from the Releases page.
+        </code></CodeSegment> archive file.
       </li>
       <li>
         Double click the <CodeSegment inline><code className="reserved">run.bat
@@ -47,18 +47,21 @@ const WindowsInstallation = () => {
 }
 const LinuxInstallation = () => {
   return (
-    <ol>
-      <li>
-        Download the latest version of BrickBench: <a className="link" href="#">brickbench-linux.jar</a>
-      </li>
-      <li>
-        Unzip the <CodeSegment inline><code className="reserved">.zip
-        </code></CodeSegment> archive from the Releases page.
-      </li>
-      <li>
-        Double click the <CodeSegment inline><code className="reserved">run.sh
-        </code></CodeSegment> file to execute the local installation.
-      </li>
-    </ol>
+    <React.Fragment>
+      <span class="ml-4 badge badge-primary">Beta</span>
+      <ol>
+        <li>
+          Download the latest version of BrickBench from releases below.
+        </li>
+        <li>
+          Unzip the <CodeSegment inline><code className="reserved">.zip
+          </code></CodeSegment> archive file.
+        </li>
+        <li>
+          Double click the <CodeSegment inline><code className="reserved">run.sh
+          </code></CodeSegment> file to execute the local installation.
+        </li>
+      </ol>
+    </React.Fragment>
   );
 }
