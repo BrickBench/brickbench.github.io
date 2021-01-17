@@ -18,10 +18,10 @@ export default function Usage() {
       <div className="row">
         <div className="col-sm-3">
           <div id="spy-target" className="p-2 list-group list-group-flush w-100 sidebar dark-bottom rounded">
-            <a className="list-group-item list-group-item-action" target="_blank" href="#overview">Overview</a>
-            <a className="list-group-item list-group-item-action" target="_blank" href="#controls">Controls</a>
-            <a className="list-group-item list-group-item-action" target="_blank" href="#file-types">File Types</a>
-            <a className="list-group-item list-group-item-action" target="_blank" href="#object-types">Object Types</a>
+            <a className="list-group-item list-group-item-action" href="#overview">Overview</a>
+            <a className="list-group-item list-group-item-action" href="#controls">Controls</a>
+            <a className="list-group-item list-group-item-action" href="#file-types">File Types</a>
+            <a className="list-group-item list-group-item-action" href="#object-types">Object Types</a>
           </div>
         </div>
         <div className="col-sm-6 p-2">
