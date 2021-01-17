@@ -14,6 +14,8 @@ export default class Home extends React.Component {
   }
 
   componentDidMount() {
+    $('.preview').css({opacity: 0});
+    $('.preview').animate({opacity: 1}, 500);
     this.interval = setInterval(this.nextPreview, 5000);
   }
 
@@ -24,6 +26,7 @@ export default class Home extends React.Component {
   nextPreview() {
     $('.preview').animate({opacity: 0}, 500, () => {
       this.setState({preview: (this.state.preview + 1) % 6}, () => {
+        $('.preview').css({opacity: 0});
         $('.preview').animate({opacity: 1}, 500);
       });
     });
@@ -49,10 +52,16 @@ export default class Home extends React.Component {
               )}
           </Preview>
           <div className="w-25 mx-5" style={{minWidth: '200px'}}>
-            <h2>Explore Maps in Detail</h2>
-            <p>Brick Bench offers an exhaustive set
-            of features and options to simplify viewing game maps, allowing
-            you to explore levels as you've never seen them before.
+            <h2>An Exhaustive Set of Features</h2>
+            <p>
+              Brick Bench's rendering focuses on accuracy to the real game engine.
+            </p>
+            <p>
+              View normally invisible level properties such as collision meshes, trigger areas, doors, and more.
+            </p>
+            <p>
+              Hook into your TCS game to plot the game state and enemies in real time,
+              or teleport anywhere on the map with a single keystroke.
             </p>
           </div>
         </div>
