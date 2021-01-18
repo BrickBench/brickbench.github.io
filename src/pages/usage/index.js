@@ -171,7 +171,7 @@ export default function Usage() {
                 )}
               </ul>
               <p>If you want more detail or to find where these objects are stored,
-              please consult the documentation at (NOT DONE YET)
+              please consult the documentation linked at the bottom of this page.
               </p>
             </div>
           </div>
