@@ -54,7 +54,7 @@ export default class Home extends React.Component {
           <div className="w-25 mx-5" style={{minWidth: '200px'}}>
             <h2>An Exhaustive Set of Features</h2>
             <p>
-              Brick Bench's rendering focuses on accuracy to the real game engine.
+              Explore your favorite maps in an accuracy-oriented renderer.
             </p>
             <p>
               View normally invisible level properties such as collision meshes, trigger areas, doors, and more.

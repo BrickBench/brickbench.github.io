@@ -23,7 +23,6 @@ export default function Footer() {
       </div>
       <div className="d-flex flex-column align-items-center">
         <img src="./images/brick-bench.png" style={{height: '1.6em'}} className="img-fluid" />
-        <small className="text-primary">Copyright © 2021, BrickBench</small>
       </div>
     </footer>
   );

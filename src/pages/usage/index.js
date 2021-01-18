@@ -141,6 +141,13 @@ export default function Usage() {
                   </CodeSegment>
                   or scrollwheel to change movement speed.
                 </li>
+                <li>
+                  <CodeSegment inline>
+                    <code className="reserved">T</code>
+                    </CodeSegment>(or<CodeSegment inline>
+                    <code className="reserved">CTRL T</code></CodeSegment> for P2)
+                  to teleport to the current camera position while the TCS hook is active.
+                </li>
               </ul>
             </div>
             <div id="file-types">
