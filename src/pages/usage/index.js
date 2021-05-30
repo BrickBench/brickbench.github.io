@@ -168,7 +168,7 @@ export default function Usage() {
             </div>
             <div id="object-types">
               <h1>Object Types</h1>
-              <p>This is a quick reference to what the objects in the top bar and search area are:</p>
+              <p>This is a quick reference to what the objects in the object list are:</p>
               <ul>
                 {data.objectTypes.map(({type, desc}) =>
                     <li>

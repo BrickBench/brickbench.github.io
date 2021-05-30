@@ -1,10 +1,6 @@
 {
   "faq": [
     {
-      "q" : "When is editing coming?",
-      "a" : "Editing is going to be a goal for the future, but we are focusing on improving accuracy first before doing editing."
-    },
-    {
       "q" : "Mac Version?",
       "a" : "Not yet."
     },

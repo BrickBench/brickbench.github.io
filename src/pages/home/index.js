@@ -52,12 +52,12 @@ export default class Home extends React.Component {
               )}
           </Preview>
           <div className="w-25 mx-5" style={{minWidth: '200px'}}>
-            <h2>An Exhaustive Set of Features</h2>
+            <h2>A Full-fledged Editor</h2>
             <p>
-              Explore your favorite maps in an accuracy-oriented renderer.
+              Brick Bench's rendering focuses on accuracy to the real game engine.
             </p>
             <p>
-              View normally invisible level properties such as collision meshes, trigger areas, doors, and more.
+              Edit map objects to modify levels or create fully custom maps.
             </p>
             <p>
               Hook into your TCS game to plot the game state and enemies in real time,

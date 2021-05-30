@@ -10,15 +10,12 @@ export default function Footer() {
         </div>
         <div>
           <h5>Community</h5>
-          <a className="link" href="#" onClick={()=>{alert('BrickBench#1566');}}>Discord</a>
+          <a className="link" href="#" onClick={()=>{alert('Jav#6478');}}>Discord</a>
         </div>
         <div>
           <h5>Project</h5>
           <a className="link" href="https://github.com/BrickBench/BrickBench"
             target="_blank">Github</a>
-          <br />
-          <a className="link" href="https://github.com/BrickBench/BrickBench/projects/1"
-            target="_blank">Progress Tracker</a>
         </div>
       </div>
       <div className="d-flex flex-column align-items-center">
